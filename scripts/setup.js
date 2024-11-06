@@ -3,11 +3,9 @@ const Food = require('../src/models/food');
 
 (async () => {
   try {
-    // Sincronizar todos os modelos com o banco de dados
-    await sequelize.sync({ force: true }); // Use { force: true } para recriar as tabelas
+    await sequelize.sync({ force: true }); // force: true para recriar as tabelas
     console.log('Tabelas criadas com sucesso.');
-
-    // Populando com dois alimentos iniciais, incluindo calorias
+    //Populando tabelas
     await Food.bulkCreate([
       { name: 'Frango', protein: 31, carb: 0, fat: 3, calories: 165 },
       { name: 'Arroz', protein: 2, carb: 28, fat: 0, calories: 130 }
@@ -21,7 +19,6 @@ const Food = require('../src/models/food');
   }
 })();
 
-
-//Código para criação e população de tabelas.
+//Código para criação e população de tabelas
 //Para rodar basta digitar no terminal: node scripts/setup.js
 
