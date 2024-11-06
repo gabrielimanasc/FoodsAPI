@@ -1,3 +1,12 @@
+# Food API
+
+API para gerenciar alimentos, incluindo operações de criar, listar, atualizar e deletar alimentos.
+
+---
+
+## OpenAPI Specification
+
+```yaml
 openapi: 3.1.0
 info:
   title: Food API
@@ -6,7 +15,6 @@ info:
 servers:
   - url: http://localhost:3000
     description: Servidor local
-
 paths:
   /foods:
     get:
@@ -41,7 +49,6 @@ paths:
                 $ref: '#/components/schemas/Food'
         '500':
           description: Erro no servidor
-
   /foods/{id}:
     get:
       summary: Obter um alimento por ID
@@ -108,7 +115,6 @@ paths:
           description: Alimento não encontrado
         '500':
           description: Erro no servidor
-
 components:
   schemas:
     Food:
@@ -150,21 +156,32 @@ components:
         calories:
           type: integer
           example: 150
+```
+---
 
-2. Pesquisa e Apresentação sobre a Pilha de Tecnologias
--Pilha de Tecnologias Utilizadas:
-Node.js: Plataforma de execução para construir a API com JavaScript, conhecida por ser altamente escalável e eficiente, usando um modelo de I/O assíncrono e orientado a eventos.
-Express.js: Framework para Node.js que facilita o desenvolvimento de APIs RESTful, oferecendo recursos simplificados para o roteamento e middleware.
-Sequelize: ORM (Object-Relational Mapping) para Node.js que facilita a interação com bancos de dados SQL, fornecendo uma maneira de definir modelos, gerenciar migrações e executar consultas complexas de maneira mais intuitiva.
+## Pesquisa e Apresentação sobre a Pilha de Tecnologias
 
--Comparação com Ferramentas e Tendências Mais Utilizadas:
-Conteúdo Estático e Renderização no Servidor (SSR)
-Next.js: Um framework popular para SSR e geração de sites estáticos. Enquanto isso, APIs REST tradicionais, como a construída com Express, são focadas em operações CRUD e não na entrega de conteúdo dinâmico.
-Microsserviços
-A arquitetura de microsserviços permite dividir a aplicação em serviços menores e independentes, ao contrário da abordagem monolítica. O design de API REST com Express é um componente comum em uma arquitetura de microsserviços, favorecendo a escalabilidade e a manutenção.
-Middleware Descentralizado e Blockchain
-Tecnologias descentralizadas, como contratos inteligentes em blockchains, oferecem um contraste interessante com abordagens tradicionais de API. Por exemplo, middleware em blockchain é usado para validar e executar transações sem um servidor central, diferindo da abordagem centralizada de Express.js.
+### Pilha de Tecnologias Utilizadas
 
--Considerações Finais:
-Desafios e Oportunidades: Integrações com serviços descentralizados podem trazer mais segurança e transparência. Além disso, o uso de SSR pode melhorar o desempenho e a SEO de aplicativos front-end.
-Aplicação Prática: A arquitetura modular da API e a flexibilidade da pilha baseada em Node.js facilitam a adaptação às necessidades de escalabilidade e segurança.
+- **Node.js**: Plataforma de execução para construir a API com JavaScript, conhecida por ser altamente escalável e eficiente, usando um modelo de I/O assíncrono e orientado a eventos.
+- **Express.js**: Framework para Node.js que facilita o desenvolvimento de APIs RESTful, oferecendo recursos simplificados para o roteamento e middleware.
+- **Sequelize**: ORM (Object-Relational Mapping) para Node.js que facilita a interação com bancos de dados SQL, fornecendo uma maneira de definir modelos, gerenciar migrações e executar consultas complexas de maneira mais intuitiva.
+
+### Comparação com Ferramentas e Tendências Mais Utilizadas
+
+#### Conteúdo Estático e Renderização no Servidor (SSR)
+
+- **Next.js**: Um framework popular para SSR e geração de sites estáticos. Enquanto isso, APIs REST tradicionais, como a construída com Express, são focadas em operações CRUD e não na entrega de conteúdo dinâmico.
+
+#### Microsserviços
+
+- A **arquitetura de microsserviços** permite dividir a aplicação em serviços menores e independentes, ao contrário da abordagem monolítica. O design de API REST com Express é um componente comum em uma arquitetura de microsserviços, favorecendo a escalabilidade e a manutenção.
+
+#### Middleware Descentralizado e Blockchain
+
+- Tecnologias descentralizadas, como contratos inteligentes em blockchains, oferecem um contraste interessante com abordagens tradicionais de API. Por exemplo, middleware em blockchain é usado para validar e executar transações sem um servidor central, diferindo da abordagem centralizada de Express.js.
+
+### Considerações Finais
+
+- **Desafios e Oportunidades**: Integrações com serviços descentralizados podem trazer mais segurança e transparência. Além disso, o uso de SSR pode melhorar o desempenho e a SEO de aplicativos front-end.
+- **Aplicação Prática**: A arquitetura modular da API e a flexibilidade da pilha baseada em Node.js facilitam a adaptação às necessidades de escalabilidade e segurança.
